@@ -34,7 +34,7 @@ class WeatherController extends Controller
         $user->email = $request['email'];
         $user->location = $request['location'];
         $user->save();
-        
+
         Mail::to($request->email)->send(new SubscriptionConfirmation());
 
         return redirect() > back()->with('success', 'You have successfully subscribed! you will get daily update ');
