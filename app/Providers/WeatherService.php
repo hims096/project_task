@@ -40,4 +40,3 @@ class WeatherService extends ServiceProvider
     {
         //
     }
-}

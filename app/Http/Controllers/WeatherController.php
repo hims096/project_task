@@ -33,6 +33,7 @@ class WeatherController extends Controller
         $user->name = $request['name'];
         $user->email = $request['email'];
         $user->location = $request['location'];
+        //dd($user);
         $user->save();
 
         Mail::to($request->email)->send(new SubscriptionConfirmation());
